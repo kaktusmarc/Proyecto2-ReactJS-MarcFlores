@@ -1,0 +1,47 @@
+.league-page {
+  padding: 40px 0 72px;
+}
+
+.league-page__back {
+  display: inline-block;
+  color: var(--chalk-dim);
+  font-size: 0.85rem;
+  margin-bottom: 18px;
+}
+
+.league-page__back:hover {
+  color: var(--floodlight);
+}
+
+.league-page__title {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  margin: 0 0 32px;
+}
+
+.league-page__grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.league-page__section-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--floodlight);
+  margin: 0 0 14px;
+}
+
+.league-page__teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+@media (max-width: 860px) {
+  .league-page__grid {
+    grid-template-columns: 1fr;
+  }
+}

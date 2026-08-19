@@ -1,0 +1,85 @@
+.hero {
+  position: relative;
+  padding: 88px 0 64px;
+  background:
+    radial-gradient(ellipse 900px 500px at 50% -10%, rgba(255, 193, 69, 0.16), transparent 60%),
+    linear-gradient(180deg, var(--ink) 0%, #0e2a1c 100%);
+  border-bottom: 1px solid var(--turf-line);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(237, 239, 230, 0.03) 0px,
+    rgba(237, 239, 230, 0.03) 1px,
+    transparent 1px,
+    transparent 80px
+  );
+  pointer-events: none;
+}
+
+.hero__inner {
+  position: relative;
+  max-width: 640px;
+}
+
+.hero__title {
+  font-size: clamp(2.8rem, 7vw, 4.6rem);
+  margin: 14px 0 20px;
+}
+
+.hero__subtitle {
+  font-size: 1.05rem;
+  color: var(--chalk-dim);
+  max-width: 460px;
+}
+
+.leagues-section {
+  padding: 56px 0 72px;
+}
+
+.leagues-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.leagues-section__title {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.leagues-search {
+  background: var(--pitch);
+  border: 1px solid var(--turf-line);
+  color: var(--chalk);
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  min-width: 220px;
+}
+
+.leagues-search:focus {
+  border-color: var(--floodlight);
+  outline: none;
+}
+
+.leagues-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 56px 0 44px;
+  }
+}

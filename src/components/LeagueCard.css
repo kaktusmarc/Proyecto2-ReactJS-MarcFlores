@@ -1,0 +1,40 @@
+.league-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  background: var(--pitch);
+  border: 1px solid var(--turf-line);
+  border-radius: var(--radius);
+  transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
+}
+
+.league-card:hover {
+  border-color: var(--floodlight);
+  background: var(--pitch-soft);
+  transform: translateY(-2px);
+}
+
+.league-card__badge {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.league-card__badge--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ink);
+  border-radius: 50%;
+  font-size: 1.4rem;
+}
+
+.league-card__name {
+  margin: 2px 0 0;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}

@@ -1,0 +1,19 @@
+.favorites-page {
+  padding: 40px 0 72px;
+}
+
+.favorites-page__title {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  margin: 0 0 8px;
+}
+
+.favorites-page__subtitle {
+  color: var(--chalk-dim);
+  margin: 0 0 32px;
+}
+
+.favorites-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
